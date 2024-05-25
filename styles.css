@@ -1,9 +1,11 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000; /* Warna latar belakang hitam */
+    color: #fff; /* Warna teks putih */
 }
 
 .header-bg {
-    background-image: url('header_background.jpg');
+    background-image: url('header_background.jpg'); /* Ganti dengan gambar yang sesuai */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -19,39 +21,23 @@ body {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 
-header h1, header p {
-    margin-bottom: 0;
-    color: #fff;
-}
-
-header img {
+header img.profile-picture {
     border: 5px solid #fff;
-    transition: transform 0.3s ease-in-out;
-}
-
-header img:hover {
-    transform: rotate(10deg);
-}
-
-
-header .navbar {
-    margin-top: 20px;
-}
-
-.profile-picture {
-    width: 150px; /* Sesuaikan dengan ukuran yang diinginkan */
-    height: 150px;
     border-radius: 50%;
-    border: 5px solid #fff;
+    width: 150px;
+    height: 150px;
     transition: transform 0.3s ease-in-out;
 }
 
-.profile-picture:hover {
+header img.profile-picture:hover {
     transform: rotate(10deg);
 }
 
+.neon-text {
+    text-shadow: 0 0 5px #00e676, 0 0 10px #00e676, 0 0 20px #00e676, 0 0 40px #00e676;
+}
 
-main {
+.main-container {
     padding-bottom: 100px;
 }
 
@@ -60,7 +46,15 @@ section {
 }
 
 .card {
+    background-color: #222;
     border: none;
+    color: #fff;
+    transition: transform 0.3s;
+    perspective: 1000px;
+}
+
+.card:hover {
+    transform: rotateY(10deg) scale(1.05);
 }
 
 .card img {
@@ -68,8 +62,12 @@ section {
     object-fit: cover;
 }
 
+.card-title {
+    color: #00e676; /* Warna teks judul card */
+}
+
 footer {
-    background-color: #343a40;
+    background-color: #000; /* Sesuaikan dengan warna latar belakang header */
     color: #fff;
     padding: 20px 0;
 }
@@ -85,12 +83,41 @@ footer .social-icons {
 }
 
 footer .social-icons a {
-    color: #fff;
+    color: #00e676; /* Warna ikon media sosial */
     font-size: 1.5rem;
     margin: 0 10px;
     transition: color 0.3s;
 }
 
 footer .social-icons a:hover {
-    color: #ccc;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #00e676;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #00b248;
+}
+
+/* Parallax Effect */
+.header-bg {
+    background-attachment: fixed;
+}
+
+.btn-back-to-top {
+    background-color: #00e676; /* Warna latar belakang tombol */
+    border: none;
+    transition: background-color 0.3s;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.btn-back-to-top:hover {
+    background-color: #00b248;
 }

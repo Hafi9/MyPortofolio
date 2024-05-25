@@ -7,51 +7,51 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Portfolio of a web developer showcasing my best projects and skills.">
     <meta name="keywords" content="web developer, portfolio, projects, coding">
     <meta name="author" content="Bisrul Hafi">
 </head>
 <body>
-    <header class="bg-dark text-white text-center py-4 header-bg">
+    <header class="text-center py-4 header-bg">
         <div class="overlay"></div>
         <div class="container">
             <img src="profile_picture.jpg" class="rounded-circle mb-3 profile-picture" alt="Profile Picture">
-            <h1>Bisrul Hafi</h1>
-            <p class="lead">Web & Application Developer</p>
+            <h1 class="neon-text">Bisrul Hafi</h1>
+            <p class="lead neon-text">Web & Application Developer</p>
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link neon-text" href="#about">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link neon-text" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link neon-text" href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
-    </header>        
+    </header>
 
     <main class="container my-5">
         <section id="about" class="text-center" data-aos="fade-up">
-            <h2 class="mb-4">About Me</h2>
+            <h2 class="mb-4 neon-text">About Me</h2>
             <p>Hello! My name is Bisrul Hafi, a dedicated and passionate developer with extensive experience in the tech industry. I have worked at <strong>PT Mitra Integrasi Informatika</strong>, where I honed my skills through various challenging and innovative projects. I have also completed an intensive 3-month bootcamp at <strong>Metrodata Coding Camp</strong>, providing me with a strong foundation in web development and programming.</p>
             <p>Currently, I am positioned at <strong>Telkom Indonesia</strong> as a developer, where I continue to grow and contribute to significant projects with broad impacts. I am always eager to solve complex problems and create efficient and effective solutions.</p>
             <p>In my work, I prioritize collaboration, innovation, and continuous learning. I believe that with a combination of strong technical skills and good communication abilities, I can make significant contributions to any team. I am always ready for new challenges and excited to keep learning and growing as a professional.</p>
         </section>
 
         <section id="projects" class="text-center my-5" data-aos="fade-up">
-            <h2 class="mb-4">Projects</h2>
+            <h2 class="mb-4 neon-text">Projects</h2>
             <div class="row">
                 <div class="col-md-4 mb-4" data-aos="zoom-in">
                     <div class="card">
                         <img src="project1.png" class="card-img-top" alt="Project 1">
                         <div class="card-body">
                             <h5 class="card-title">Glorindo Group</h5>
-                            <p class="card-text">Developed a company profile website that comprehensively presents the company's identity, vision, mission, and values. The website provides information about the company's history, services or products offered, management team, and contact details. The responsive design ensures optimal display on various devices, while the integration of images and videos enriches the user experience. Additional features include a contact form, location map, and links to the company's social media to enhance visitor engagement.</p>
+                            <p class="card-text">Developing a company profile website that comprehensively presents the company's identity, vision, mission, and values. The website provides information about the company's history, services or products offered, management team, and contact details. The responsive design ensures optimal display on various devices, while the integration of images and videos enriches the user experience. Additional features include a contact form, location map, and links to the company's social media to enhance visitor engagement.</p>
                         </div>
                     </div>
                 </div>
@@ -77,14 +77,8 @@
             </div>
         </section>
 
-        <section id="blog" class="text-center my-5" data-aos="fade-up">
-            <h2 class="mb-4">Blog</h2>
-            <p>Coming soon...</p>
-            <!-- Placeholder for future blog posts -->
-        </section>
-
         <section id="contact" class="text-center my-5" data-aos="fade-up">
-            <h2 class="mb-4">Contact</h2>
+            <h2 class="mb-4 neon-text">Contact</h2>
             <form action="https://formspree.io/f/mdoqvdpz" method="POST">
                 <div class="form-group">
                     <input type="email" class="form-control" name="_replyto" placeholder="Your Email" required>
@@ -97,7 +91,7 @@
         </section>
     </main>
 
-    <footer class="bg-dark text-white text-center py-4">
+    <footer class="text-center py-4 footer-bg">
         <div class="container">
             <p>&copy; 2024 Bisrul Hafi. All rights reserved.</p>
             <div class="social-icons">
@@ -111,6 +105,7 @@
                     <i class="fab fa-twitter"></i>
                 </a>
             </div>
+            <a href="#" class="btn btn-secondary btn-back-to-top mt-3">Back to Top</a> <!-- Tombol "Back to Top" -->    
         </div>
     </footer>
 
@@ -120,21 +115,39 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init();
-    
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-    
+
                 const target = document.querySelector(this.getAttribute('href'));
-                const offset = -200; // Adjust based on header height if needed
+                const offset = -200; // Sesuaikan dengan tinggi header Anda jika diperlukan
                 const targetPosition = target.getBoundingClientRect().top + window.pageYOffset + offset;
-    
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
                 });
             });
         });
+
+        // Kembali ke atas saat tombol diklik
+    document.querySelector('.btn-back-to-top').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    // Tampilkan atau sembunyikan tombol "Back to Top" berdasarkan posisi scroll
+    window.addEventListener('scroll', function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var backToTopButton = document.querySelector('.btn-back-to-top');
+        
+        // Jika pengguna menelusuri lebih dari 200 piksel dari bagian atas, tampilkan tombol "Back to Top", jika tidak, sembunyikan
+        if (scrollTop > 200) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
     </script>    
 </body>
 </html>
